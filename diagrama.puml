@@ -1,0 +1,31 @@
+@startuml Diagrama
+
+class Jugador
+class Chumi{
+    - Vida : vida
+    + Consumir(Foco) 
+}
+class Foco{
+    - Piedra : piedra
+    + Fumar() : Humo
+}
+class Piedra{
+    - Humo : humo
+    + Quemar() : Humo
+}
+class Humo
+class Vida
+class Numero
+
+Jugador o-- Chumi
+Chumi *-- Vida
+Foco *-- Piedra
+Foco o-- Piedra
+Chumi o-- Foco
+Piedra *-- Humo
+Vida --|> Numero
+
+
+
+
+@enduml
